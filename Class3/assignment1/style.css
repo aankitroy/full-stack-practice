@@ -1,0 +1,12 @@
+/* Write CSS code here */
+.highlight {
+    background-color: yellow;
+}
+
+#special {
+    font-size: 20px;
+}
+
+a:hover {
+    color: red;
+  }

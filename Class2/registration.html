@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="fullname"
+              id="name"
+              placeholder="Enter your name"
+              value="Aankit Roy"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone"
+            />
+          </div>
+          <div>
+            <label for="degree">Degree</label>
+            <select name="degree" id="degree">
+              <option value="btech">B.Tech</option>
+              <option value="mtech">M.Tech</option>
+              <option value="phd">PhD</option>
+            </select>
+          </div>
+          <div>
+            <label for="graduation-year">Graduation Year</label>
+            <input
+              type="date"
+              name="graduation-year"
+              id="graduation-year"
+              placeholder="Enter your graduation year"
+            />
+          </div>
+          <div>
+            <label for="DOB">Date of Birth</label>
+            <input
+              type="date"
+              name="DOB"
+              id="DOB"
+            />
+          </div>
+          <div>
+            <label for="query">Query</label>
+            <textarea
+              name="query"
+              id="query"
+              placeholder="Enter your query"
+            ></textarea>
+          </div>
+          <div>
+         <div>
+            <span>Gender</span>
+            <div>
+                <label>Male</label>
+                <input type="radio" name="gender" value="M">
+                <label>Female</label>
+                <input type="radio" name="gender" value="F">
+                <label>Other</label>
+                <input type="radio" name="gender" value="O">
+            </div>
+         </div>
+         <div>
+            <span>Course Slot</span>
+            <div>
+                <label>Morning</label>
+                <input type="checkbox" name="slot" value="m">
+                <label>Evening</label>
+                <input type="checkbox" name="slot" value="e">
+            </div>
+         </div>
+         <div>
+            <label for="profile-photo">Profile Picture</label>
+            <input
+              type="file"
+              name="profile-photo"
+              id="profile-photo"
+              accept=".png, .jpg, .jpeg"
+            />
+          </div>
+          <div>
+            <label>Introduction</label>
+            <textarea> </textarea>
+          </div>
+          <div>
+            <button type="submit">Register</button>
+         </div>
+    </form>
+    <!-- Name -->
+    <!-- Email -->
+    <!-- Phone -->
+    <!-- Degree -->
+    <!-- Graduation Year-->
+    <!-- Query -->
+    <!-- Gender -->
+    <!-- Profile Photo -->
+    <!-- Submit -->
+
+  </body>
+</html>

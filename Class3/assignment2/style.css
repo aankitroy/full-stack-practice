@@ -1,0 +1,10 @@
+.highlight {
+    color: #ff0000;
+}
+#special {
+    background-color: hsl(120, 100%, 50%);
+}
+
+a:hover {
+    color: hsla(0, 100%, 50%, 0.8);
+}
