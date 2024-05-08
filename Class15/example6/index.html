@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <script>
+      // WRITE THE JS PROGRAM HERE ====================================================================
+      const paraRef = document.querySelectorAll("p");
+      paraRef.forEach((para) => {
+        para.addEventListener("click", (event) => {
+          if (event.detail == 1) {
+            event.target.style.background = "red";
+          } else if (event.detail == 2) {
+            event.target.style.background = "green";
+          } else if (event.detail == 3) {
+            event.target.style.background = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Page</title>
+  </head>
+  <body>
+    <input
+      id="username"
+      type="text"
+      name="name"
+      placeholder="Write you name here"
+    />
+    <input
+      id="password"
+      type="password"
+      name="password"
+      placeholder="Write you password here"
+    />
+    <button id="submit">Login</button>
+    <div id="preview"></div>
+    <script>
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      const submit = document.getElementById("submit");
+
+      username.addEventListener("keyup", (event) => {
+        const preview = document.getElementById("preview");
+        preview.innerHTML = event.target.value;
+      });
+      submit.addEventListener("click", () => {
+        e.preventDefault();
+        console.log({
+          username: username.value,
+          password: password.value,
+        });
+      });
+    </script>
+  </body>
+</html>

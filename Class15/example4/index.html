@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplication Form</title>
+  </head>
+  <body>
+    <h1>Multiplication Form</h1>
+
+    <form>
+      <label for="num1">Number 1:</label>
+      <input type="number" id="num1" name="num1" required />
+
+      <label for="num2">Number 2:</label>
+      <input type="number" id="num2" name="num2" required />
+
+      <span id="result">5</span>
+
+      <button id="submit" type="submit">Multiply</button>
+    </form>
+
+    <script>
+      submitButton = document.getElementById("submit");
+      resultSpan = document.getElementById("result");
+      num1Input = document.getElementById("num1");
+      num2Input = document.getElementById("num2");
+
+      num1Input.addEventListener("change", function (event) {
+        event.preventDefault();
+        resultSpan.innerText = +num1Input.value + +num2Input.value;
+      });
+
+      num2Input.addEventListener("change", function (event) {
+        event.preventDefault();
+        resultSpan.innerText = +num1Input.value + +num2Input.value;
+      });
+
+      //   submitButton.addEventListener("click", function (event) {
+      //     event.preventDefault();
+
+      //     var num1 = parseInt(document.getElementById("num1").value);
+      //     var num2 = parseInt(document.getElementById("num2").value);
+
+      //     var result = num1 * num2;
+
+      //     alert("The result is: " + result);
+      //   });
+    </script>
+  </body>
+</html>

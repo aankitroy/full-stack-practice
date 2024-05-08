@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Page</title>
+    <style>
+      .header {
+        background-color: aqua;
+        grid-area: header;
+      }
+      .footer {
+        background-color: bisque;
+        grid-area: footer;
+      }
+      .sidebar {
+        background-color: pink;
+        grid-area: sidebar;
+      }
+      .right-menu {
+        background-color: aquamarine;
+        grid-area: rightmenu;
+      }
+      .main-content {
+        background-color: darkolivegreen;
+        grid-area: maincontent;
+      }
+
+      .container {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-areas:
+          "header header header header"
+          "sidebar maincontent maincontent rightmenu"
+          "sidebar maincontent maincontent rightmenu"
+          "sidebar maincontent maincontent rightmenu"
+          "sidebar maincontent maincontent rightmenu"
+          "footer footer footer footer";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main-content">Main Content</div>
+      <div class="right-menu">Right Menu</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
