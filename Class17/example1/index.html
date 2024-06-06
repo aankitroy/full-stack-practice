@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanbaan Board</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        display: flex;
+        background-color: rgb(43, 42, 42);
+        padding: 10px 0px 10px 50px;
+      }
+
+      .sorting {
+        display: flex;
+        align-items: center;
+        background-color: rgb(27, 27, 27);
+        padding: 10px;
+        column-gap: 10px;
+      }
+
+      .sorting .box {
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+      }
+
+      .sorting .box:hover {
+        border: 2px solid white;
+      }
+
+      .sorting .box.p1 {
+        background-color: pink;
+      }
+
+      .sorting .box.p2 {
+        background-color: greenyellow;
+      }
+
+      .sorting .box.p3 {
+        background-color: blue;
+      }
+
+      .sorting .box.p4 {
+        background-color: black;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        background-color: rgb(27, 27, 27);
+        margin: 0 30px;
+      }
+
+      .actions .box {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .actions .box:hover {
+        background-color: green;
+      }
+
+      .search input {
+        width: 300px;
+        height: 50px;
+        background-color: white;
+        font-size: 18px;
+        padding: 0px 15px;
+      }
+
+      .task-section {
+        display: flex;
+        padding: 30px;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        row-gap: 30px;
+      }
+
+      .task-section .task {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+      }
+
+      .task-section .task .task-priority {
+        width: 100%;
+        height: 10px;
+        background-color: blue;
+      }
+
+      .task-section .task .task-id {
+        width: 100%;
+        height: 20px;
+        background-color: black;
+      }
+
+      .task-section .task .task-title {
+        display: flex;
+        flex-grow: 1;
+        padding: 5px;
+        background-color: orange;
+      }
+
+      .heading {
+        padding: 10px 0px 0px 30px;
+      }
+
+      .add-task-modal {
+        display: flex;
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ccc;
+      }
+
+      .add-task-modal .left-section {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      .add-task-modal .left-section textarea {
+        display: flex;
+        flex-grow: 1;
+        padding: 10px;
+      }
+
+      .add-task-modal .right-section {
+        display: flex;
+        width: 120px;
+        flex-direction: column;
+        padding: 10px;
+        row-gap: 10px;
+        justify-content: center;
+      }
+
+      .add-task-modal .right-section .box {
+        width: 100px;
+        height: 80px;
+      }
+
+      .add-task-modal .right-section .box:hover {
+        border: 2px solid black;
+      }
+
+      .add-task-modal .right-section .box.p1 {
+        background-color: pink;
+      }
+
+      .add-task-modal .right-section .box.p2 {
+        background-color: greenyellow;
+      }
+
+      .add-task-modal .right-section .box.p3 {
+        background-color: blue;
+      }
+
+      .add-task-modal .right-section .box.p4 {
+        background-color: black;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="sorting">
+        <div class="p1 box"></div>
+        <div class="p2 box"></div>
+        <div class="p3 box"></div>
+        <div class="p4 box"></div>
+      </div>
+      <div class="actions">
+        <div class="add box">+</div>
+        <div class="remove box">x</div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search title or id" />
+      </div>
+    </header>
+    <h1 class="heading">Kanbaan Board</h1>
+    <div class="task-section"></div>
+    <div class="add-task-modal">
+      <div class="left-section">
+        <textarea placeholder="Enter task title"></textarea>
+      </div>
+      <div class="right-section">
+        <div class="box p1"></div>
+        <div class="box p2"></div>
+        <div class="box p3"></div>
+        <div class="box p4"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
